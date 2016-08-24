@@ -1,0 +1,160 @@
+#topNav{
+	height: 14%;
+    background: #7FBD8D;
+    border: 5px solid #F5C89D;
+}
+	#topNav #topNavTitle{
+		font-family: "Montagne-Regular";
+		font-size: 80px;
+		color: white;
+		text-align: center;
+		display: block;
+	}
+#dashLogOff{
+	font-family: "segoeuil";
+	margin-left: auto;
+	margin-right: 2%;
+    background: #7FBD8D;
+    border: none;
+    color: white;
+    display: block;
+    font-weight: bolder;
+    font-size: 15px;
+}
+#filterTopicsDiv, #dashTableForm, #dashTablediv,#dashFormDiv{
+	width: 100%;
+	display: block;
+}
+    #filterTopicsDiv input[type=text]{
+    	font-size: 15px;
+        color: white;
+        font-weight: bold;
+        background: transparent;
+        border: none;
+        border-bottom: 1px dashed #FAD0A8;
+        width: 275px;
+        outline: none;
+        padding: 0px 0px 0px 0px;
+        font-style: italic;
+        color: white;
+        margin-top: 1%;
+        margin-left: 2%;
+        margin-right: auto;
+        margin-bottom: 1%;
+    	font-family: "segoeuil";
+
+    }
+    #filterTopicsDiv input[type=text]:focus{
+        border-bottom: 1px dashed #AB473D;
+    }
+#dashTable{
+	background: #7FBD8D;
+    border: 5px solid #F5C89D;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 40%;
+    height: auto;
+    color: white;
+	font-family: "segoeuil";
+}
+	#dashTable th, td{
+	    padding: 15px;
+	    text-align: left;
+	}
+	#dashTable a:link{
+		text-decoration: none;
+		color: #F5C89D;
+	}
+	#dashTable a:visited{
+		text-decoration: none;
+		color: white;
+	}
+	#dashTable a:hover{
+		text-decoration: none;
+		color: #275F69;
+	}
+#dashFormDiv h4{
+	font-family: "segoeuil";
+	color: white;
+	margin-left: 2%;
+	font-size: 15px;
+    font-weight: bold;
+    border-bottom: 1px dashed #FAD0A8;
+    width: 280px;
+    outline: none;
+    font-style: italic;
+    margin-top: 1%;
+    margin-right: auto;
+    margin-bottom: 2%;
+}
+#dashForm{
+	width: 36%;
+	height: auto;
+    background: #7FBD8D;
+    padding: 15px 30px 15px 30px;
+    border: 5px solid #F5C89D;
+    margin-left: auto;
+	margin-right: auto;
+	font-family: "segoeuil";
+}
+
+    #dashForm input[type=password],
+    #dashForm input[type=text],
+    #dashForm input[type=email],
+    #dashForm select,
+    #dashForm option,
+    #dashForm label
+    {
+        font-size: 15px;
+        color: white;
+        font-weight: bold;
+    	font-family: "segoeuil";
+
+    }
+    #dashForm label{
+    	margin-top: 1.5%;
+        display:block;
+        margin-bottom: 10px;
+    }
+    #dashForm label > span{
+        display: inline-block;
+        float: left;
+        width: 150px;
+        margin-left: 15%;
+    }
+    #dashForm input[type=text],
+    #dashForm textarea,
+    #dashForm select,
+    #dashForm option
+    {
+        background: transparent;
+        border: none;
+        border-bottom: 1px dashed #FAD0A8;
+        width: 275px;
+        outline: none;
+        padding: 0px 0px 0px 0px;
+        font-style: italic;
+        color: #275F69;
+    	font-family: "segoeuil";
+
+    }
+#registerForm input[type=text]:focus
+{
+    border-bottom: 1px dashed #AB473D;
+}
+#newTopicInput
+{
+	margin-top: 1%;
+	margin-left: auto;
+	margin-right: auto;
+    background: #7FBD8D;
+    border: none;
+    padding: 8px 10px 8px 10px;
+    border-radius: 5px;
+    color: white;
+    display: block;
+    font-weight: bolder;
+    font-size: 20px;
+	font-family: "segoeuil";
+
+}

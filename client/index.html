@@ -1,0 +1,29 @@
+<html ng-app = 'myApp'>
+<head>
+	<title></title>
+	<script src="angular/angular.js" charset="utf-8"></script>
+    <script src="angular-route/angular-route.js" charset="utf-8"></script>
+    <script src="angular-cookies/angular-cookies.js" charset="utf-8"></script>
+
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/dashboardStyle.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/topicStyle.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/showUser.css">
+
+    <script src="./assets/app.js" charset="utf-8"></script>
+    
+    <script src="./assets/factories/user.angular.js"></script>
+    <script src="./assets/factories/topic.angular.js"></script>
+    <script src="./assets/factories/comment.angular.js"></script>
+
+    <script src="./assets/controllers/dashboards.angular.js"></script>
+    <script src="./assets/controllers/topics.angular.js"></script>
+    <script src="./assets/controllers/users.angular.js"></script>
+    <script src="./assets/controllers/showUsers.angular.js"></script>
+
+
+</head>
+<body>
+	<div ng-view = ""></div>
+</body>
+</html>

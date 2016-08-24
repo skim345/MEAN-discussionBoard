@@ -1,0 +1,34 @@
+
+<div class="error" ng-repeat="error in errors">{{error}}</div>
+
+<h2 class="loginRegTitle">Register</h2>
+
+<div id="register">
+	<form id="registerForm">
+		<label><span>First Name: </span></label>
+		<input type="text" ng-model = "newUser.firstName">
+		<label><span>Last Name: </span></label>
+		<input type="text" ng-model = "newUser.lastName">
+		<label><span>Username: </span></label>
+		<input type="text" ng-model = "newUser.userName">
+		<label><span>Email: </span></label>
+		<input type="email" ng-model = "newUser.email">
+		<label><span>Password: </span></label>
+		<input type="password" ng-model = "newUser.password">
+		<label><span>Confirm Password: </span></label>
+		<input type="password" ng-model = "newUser.confPassword">
+		<input id="registerUser" type="submit" ng-click="register()" value="Register New User">
+	</form>
+</div>
+
+<h2 class="loginRegTitle">Login</h2>
+
+<div id="login">
+	<form id="loginForm">
+		<label><span>Email: </span></label>
+		<input type="text" ng-model = "regUser.email">
+		<label><span>Password: </span></label>
+		<input type="password" ng-model = "regUser.password">
+		<input id="loginUser" type="submit"  ng-click = "login()" value="Login">
+	</form>
+</div>

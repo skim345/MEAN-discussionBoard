@@ -1,0 +1,156 @@
+#topTopicDiv{
+	height: 5%;
+    background: #7FBD8D;
+    border: 5px solid #F5C89D;
+}
+	#topTopicDiv a{
+		font-family: "segoeuil";
+	    background: #7FBD8D;
+	    border: none;
+	    color: white;
+	    font-weight: bolder;
+	    font-size: 15px;
+	    text-decoration: none;
+    	margin-top: 0.5%;
+    	display: inline-block;
+    	margin-left: 1%;
+	}
+	#topTopicDiv a:link{
+		color: white;
+	}
+	#topTopicDiv a:visited{
+		color: #F5C89D;
+		
+	}
+	#topTopicDiv a:hover{
+		color: #275F69;
+		
+	}
+#topicLogOff{
+	font-family: "segoeuil";
+    background: #7FBD8D;
+    border: none;
+    color: white;
+    font-weight: bolder;
+    font-size: 15px;
+    margin-top: 0.5%;
+    display: inline-block;
+    margin-left: 1%;
+}
+	#topicLogOff:hover{
+		color: #275F69;
+	}
+#discussionDiv{
+	width: 100%;
+}
+	#discussionDiv h3{
+		font-family: "segoeuil";
+	    margin-left: 1%;
+	    color: white;
+		font-size: 35px;
+		display: inline;
+	}
+	#discussionDiv a{
+		display: inline-block;
+		margin-top: 1%;
+	    margin-bottom: 2%;
+	}
+	#discussionDiv a:link{
+		color: white;
+	}
+	#discussionDiv a:visited{
+		color: #F5C89D;	
+	}
+	#discussionDiv a:hover{
+		color: #7FBD8D;
+	}
+	#discussionDiv h4{
+		font-family: "segoeuil";
+	    margin-left: 1%;
+	    color: white;
+		font-size: 20px;
+		display: block;
+	}
+#topicSpecial{
+	font-size: 25px;
+}
+#comments{
+	font-size: 15px;
+	font-family: "segoeuil";
+	color: white;
+	margin-left: 1%;
+	margin-bottom: 1%;
+}
+#like{
+	margin-top: 1%;
+    background: #7FBD8D;
+    border: none;
+    padding: 2px 4px 2px 4px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bolder;
+    font-size: 15px;
+	font-family: "segoeuil";
+}
+#dislike{
+	margin-top: 1%;
+    background: #7FBD8D;
+    border: none;
+    padding: 2px 4px 2px 4px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bolder;
+    font-size: 15px;
+	font-family: "segoeuil";
+}
+#commentForm{
+	width: 35%;
+	height: auto;
+    background: #7FBD8D;
+    padding: 15px 30px 15px 30px;
+    border: 5px solid #F5C89D;
+    margin-left: 1%;
+    margin-top: 2%;
+	font-family: "segoeuil";
+}
+	#commentForm input[type=text],
+	#commentForm label,
+	#commentForm textarea{
+		font-size: 15px;
+	    color: white;
+	    font-weight: bold;
+		font-family: "segoeuil";
+	}
+	#commentForm label{
+		margin-top: 1.5%;
+	    display:block;
+	    margin-bottom: 10px;
+	}	
+	#commentForm input[type=text],
+	#commentForm textarea{
+	    background: transparent;
+	    border: none;
+	    border-bottom: 1px dashed #FAD0A8;
+	    width: 275px;
+	    outline: none;
+	    padding: 0px 0px 0px 0px;
+	    font-style: italic;
+	    color: #275F69;
+		font-family: "segoeuil";
+
+	}
+	#commentForm textarea:focus{
+	    border-bottom: 1px dashed #AB473D;
+	}
+#commentInput{
+    background: #7FBD8D;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    display: block;
+    font-weight: bolder;
+    font-size: 15px;
+	font-family: "segoeuil";
+	margin-top: 1%;
+}
+

@@ -1,0 +1,21 @@
+<div id="topTopicDiv">
+	<a href="#/dashboard">Dashboard</a>
+	<button id="topicLogOff" ng-click="logoff()">Log Off</button>
+</div>
+<div ng-repeat="error in errors">{{error}}</div>
+<div ng-repeat="topics in singleTopic" id="discussionDiv">
+	<h3><a href="#/show/{{topics._user._id}}">{{topics.name}}</a> Posted a Topic: </h3>
+	<h3><span id="topicSpecial">{{topics.topic}}</span></h3>
+	<h4>Description: {{topics.description}}</h4>
+	<h5 ng-repeat = "topic in topics._comment" id="comments">
+		<a href="#/show/{{topic._user}}">{{topic.name}}</a> 
+		Replied: {{topic.comment}} 
+		<button id="like" ng-click="voteUp(topic._id, topics._id)">&#128077 {{topic.voteUp}}</button>
+		<button id="dislike" ng-click="voteDown(topic._id, topics._id)"><p>&#128078 {{topic.voteDown}}</p></button>
+	</h5>
+	<form id="commentForm">
+		<label><span>Reply: </span></label>
+		<textarea ng-model="newComment.comment"></textarea>
+		<input type="submit" ng-click="createComment(newComment, topics._id)" id="commentInput">
+	</form>
+</div>

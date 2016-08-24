@@ -1,0 +1,54 @@
+<div id="topNav">
+	<h1 id="topNavTitle">Welcome {{user.userName}}</h1>
+	<button id="dashLogOff" ng-click="logoff()">Log Off</button>
+</div>
+<div id="filterTopicsDiv">
+	<input type="text" ng-model="filterTopics" placeholder="Filter">
+</div>
+<div id="dashTableForm">
+	<div id="dashTablediv">
+		<table id="dashTable">
+			<thead>
+				<tr>
+					<th>Category</th>
+					<th>Topic</th>
+					<th>User Name</th>
+					<th>Posts</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="topics in allTopics | orderBy: '-createdAt'| filter: filterTopics">
+					<td>{{topics.category}}</td>
+					<td><a href="#/topics/{{topics._id}}">{{topics.topic}}</a></td>
+					<td><a href="#/show/{{topics._user._id}}">{{topics.name}}</a></td>
+					<td>{{topics._user.posts}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div id="dashFormDiv">
+		<h4>Add a New Topic</h4>
+		<form id="dashForm">
+			<label><span>Topic: </span></label>
+			<input type="text" ng-model="newTopic.topic">
+			<label><span>Description: </span></label>
+			<textarea ng-model="newTopic.description"></textarea>
+			<label><span>Category: </span></label>
+			<select ng-model="newTopic.category">
+				<option value="HTML">HTML</option>
+				<option value="Javascript">Javascript</option>
+				<option value="Angular">Angular</option>
+				<option value="PHP">PHP</option>
+				<option value="MongoDB">MongoDB</option>
+				<option value="Node">Node</option>
+				<option value="MySQL">MySQL</option>
+				<option value="Ajax">Ajax</option>
+				<option value="Express">Express</option>
+				<option value="Other">Other</option>
+			</select>
+			<input id="newTopicInput"type="submit" ng-click="createTopic()">
+		</form>
+	</div>
+
+
+</div>

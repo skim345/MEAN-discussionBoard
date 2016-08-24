@@ -1,0 +1,54 @@
+#showUserDiv{
+	height: 14%;
+    background: #7FBD8D;
+    border: 5px solid #F5C89D;
+}
+#showUserDiv h1{
+	font-size: 85px;
+	display: block;
+	font-family: "Montagne-Regular";
+	color: white;
+	text-align: center;
+}
+#showUserDiv a{
+	font-family: "segoeuil";
+    background: #7FBD8D;
+    border: none;
+    color: white;
+    font-weight: bolder;
+    font-size: 15px;
+    text-decoration: none;
+	display: inline-block;
+	margin-left: 90%;
+}
+#showUserDiv a:link{
+	color: white;
+}
+	#showUserDiv a:visited{
+	color: #F5C89D;
+}
+	#showUserDiv a:hover{
+	color: #275F69;
+}
+#showUserLogOff{
+	font-family: "segoeuil";
+    background: #7FBD8D;
+    border: none;
+    color: white;
+    font-weight: bolder;
+    font-size: 15px;
+    display: inline-block;
+    margin-left: 2%;
+}
+#showUserLogOff:hover{
+	color: #275F69;
+}
+#showUserInfo h2{
+	font-size: 40px;
+	font-family: "segoeuil";
+	color: white;
+	margin-left: 1%;
+	margin-bottom: 1%;
+	margin-top: 2%;
+	text-align: center;
+}

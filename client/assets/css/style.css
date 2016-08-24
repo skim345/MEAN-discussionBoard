@@ -1,0 +1,114 @@
+@font-face{
+    font-family: "Montagne-Regular";
+    src: url('./../font/Montagne-Regular.otf'),
+    url('Montagne-Regular.otf'); /* IE */
+}
+@font-face{
+    font-family: "segoeuil";
+    src: url('./../font/segoeuil.ttf'),
+    url('segoeuil.ttf'); /* IE */
+}
+*{
+	margin: 0px;
+	padding: 0px;
+}
+body{
+	background-color: #275F69;
+	width: 100%;
+}
+.error{
+	color: #F5C89D;
+	text-align: center;
+	font-weight: bolder;
+	font-size: 22px;
+	font-family: "segoeuil";
+
+}
+.loginRegTitle{
+	font-family: "Montagne-Regular";
+	color: #F5C89D;
+	text-align: center;
+	font-size: 150px;
+	display: block;
+	margin-bottom: 1.5%;
+}
+#register, #login{
+	width: 100%;
+}
+#registerForm,#loginForm{
+	width: 35%;
+	height: auto;
+    background: #7FBD8D;
+    padding: 15px 30px 15px 30px;
+    border: 5px solid #F5C89D;
+    color: white;
+    margin-left: auto;
+	margin-right: auto;
+	font-family: "segoeuil";
+	
+}
+    #registerForm input[type=password],
+    #registerForm input[type=text],
+    #registerForm input[type=email],
+    #registerForm label
+    #loginForm input[type=password],
+    #loginForm input[type=text],
+    #loginForm input[type=email],
+    #loginForm label{
+        font-size: 15px;
+        color: white;
+        font-weight: bold;
+    	font-family: "segoeuil";
+
+    }
+    #registerForm label,#loginForm label{
+    	margin-top: 1.5%;
+        display:block;
+        margin-bottom: 10px;
+    }
+    #registerForm label > span, #loginForm label > span{
+        display: inline-block;
+        float: left;
+        width: 150px;
+        margin-left: 15%;
+    }
+    #registerForm input[type=text],
+    #registerForm input[type=password],
+    #registerForm input[type=email],
+    #loginForm input[type=text],
+    #loginForm input[type=password],
+    #loginForm input[type=email]{
+        background: transparent;
+        border: none;
+        border-bottom: 1px dashed #FAD0A8;
+        width: 275px;
+        outline: none;
+        padding: 0px 0px 0px 0px;
+        font-style: italic;
+        color: white;
+    	font-family: "segoeuil";
+
+    }
+    #registerForm input[type=text]:focus,
+    #registerForm input[type=password]:focus,
+    #registerForm input[type=email]:focus,
+    #loginForm input[type=text]:focus,
+    #loginForm input[type=password]:focus,
+    #loginForm input[type=email]:focus{
+        border-bottom: 1px dashed #AB473D;
+    }
+#registerUser, #loginUser{
+	margin-top: 1%;
+	margin-left: auto;
+	margin-right: auto;
+    background: #7FBD8D;
+    border: none;
+    padding: 8px 10px 8px 10px;
+    border-radius: 5px;
+    color: white;
+    display: block;
+    font-weight: bolder;
+    font-size: 20px;
+	font-family: "segoeuil";
+}
+
