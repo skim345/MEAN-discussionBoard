@@ -1,4 +1,4 @@
-# Discusion Board
+# Discussion Board
 ### A discussion board you would find similar in a Q&A site. A user can post questions regarding a topic and have other users respond or comment.
 
 ## Features
