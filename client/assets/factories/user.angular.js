@@ -19,7 +19,6 @@ myApp.factory('userFactory', function($http){
 		})
 	}
 	factory.showUser = function(userId, callback){
-		// console.log(userId);
 		$http.get('/showUser/'+userId).success(function(response){
 			if(!response.status){
 				callback(response);
@@ -30,7 +29,6 @@ myApp.factory('userFactory', function($http){
 	}
 
 	factory.register= function(newUserInfo, callback){
-		// console.log(newUserInfo);
 		$http.post('/register', newUserInfo).success(function(response){
 			if(response.status){
 				sessionUser = response.sessionUser;
@@ -47,13 +45,11 @@ myApp.factory('userFactory', function($http){
 		})
 	}
 	factory.login = function(user_info, callback){
-		// console.log(user_info);
 		$http.post('/login', user_info).success(function(response){
 			if(response.status){
 				sessionUser = response.sessionUser;
 			}
 			callback(response);
-			// console.log(response);
 		})
 	}
 

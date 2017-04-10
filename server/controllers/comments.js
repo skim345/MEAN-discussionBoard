@@ -7,7 +7,7 @@ module.exports=(function(){
 	return{
 	
 	createComment: function(req, res){
-		// console.log(req.body);
+		// creating new comment
 		var newComment = new Comment({
 			name: req.body.posterUserName,
 			comment: req.body.comment,
@@ -16,6 +16,8 @@ module.exports=(function(){
 		});
 		newComment._topic = req.body.topicId;
 		newComment._user = req.body.posterId;
+
+		// saving new comment
 		newComment.save(function(err, comment){
 			if(err){
 				console.log(err);
@@ -25,6 +27,7 @@ module.exports=(function(){
 					}
 					res.json({status: false, errors: errorsArr});
 			}else{
+				// Searching for topic ID and updating the topic with new comment
 				Topic.update({_id: req.body.topicId},{$push:{"_comment":newComment}}, function(err){
 					if(err){
 						console.log(err);
@@ -34,6 +37,7 @@ module.exports=(function(){
 						}
 						res.json({status: false, errors: errorsArr});
 					}else{
+						// Searching for user who posted comment and updating User database
 						User.update({_id:req.body.posterId},{$push:{"_comment":newComment}}, function(err){
 							if(err){
 								console.log(err);
@@ -43,6 +47,7 @@ module.exports=(function(){
 								}
 								res.json({status: false, errors: errorsArr});
 							}else{
+								// Finding the topic and comment and sending it back to the front
 								Topic.find({_id: req.body.topicId}).populate('_comment _user').exec(function(err, topic){
 									if(err){
 										console.log(err);
@@ -64,7 +69,7 @@ module.exports=(function(){
 		})
 	},
 	voteUp: function(req, res){
-		// console.log(req.body);
+		// finding comment and updating voteUp section to reflect change
 		Comment.update({_id: req.body.commentId}, {$inc:{voteUp: +1}},function(err){
 			if(err){
 				console.log(err);
@@ -74,6 +79,7 @@ module.exports=(function(){
 				}
 				res.json({status: false, errors: errorsArr});
 			}else{
+				// Finding the topic and comment and sending it back to the front
 				Topic.find({_id: req.body.topicId}).populate('_comment _user').exec(function(err, topic){
 					if(err){
 						var errorsArr = [];
@@ -90,7 +96,7 @@ module.exports=(function(){
 		})
 	},
 	voteDown: function(req, res){
-		// console.log(req.body);
+		// finding comment and updating voteDown section to reflect change
 		Comment.update({_id: req.body.commentId}, {$inc:{voteDown: +1}},function(err){
 			if(err){
 				console.log(err);
@@ -100,6 +106,7 @@ module.exports=(function(){
 				}
 				res.json({status: false, errors: errorsArr});
 			}else{
+				// Finding the topic and comment and sending it back to the front
 				Topic.find({_id: req.body.topicId}).populate('_comment _user').exec(function(err, topic){
 					if(err){
 						var errorsArr = [];

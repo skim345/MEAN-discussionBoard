@@ -2,7 +2,7 @@ myApp.controller('topicController',['$scope','topicFactory', '$routeParams', '$l
 
 	$scope.errors=[];
 
-
+	// On page load, get a single topic selected by user
 	topicFactory.getSingleTopic($routeParams.id, function(response){
 		// console.log(response);
 		if(!response.status){
@@ -11,6 +11,7 @@ myApp.controller('topicController',['$scope','topicFactory', '$routeParams', '$l
 			$scope.singleTopic = response.topic;
 		}
 	})
+	// logoff user
 	$scope.logoff= function(){
 		userFactory.logoff(function(response){
 			if(!response.status){
@@ -22,13 +23,12 @@ myApp.controller('topicController',['$scope','topicFactory', '$routeParams', '$l
 			}
 		})
 	}
+	// create comment made by user
 	$scope.createComment = function(commentInfo, topicId){
-		// console.log(commentInfo);
 		userFactory.getUser(function(user_info){
 			$scope.posterInfo = user_info;
 		})
 		commentFactory.createComment(commentInfo, topicId, $scope.posterInfo, function(response){
-			// console.log(response);
 			if(!response.status){
 				$scope.errors.push(response.errors);
 			}else{
@@ -36,11 +36,9 @@ myApp.controller('topicController',['$scope','topicFactory', '$routeParams', '$l
 			}
 		})
 	}
+	// Upvote a comment a user likes
 	$scope.voteUp= function(commentId, topicId){
-		// console.log(commentId);
-		// console.log(topicId);
 		commentFactory.voteUp(commentId, topicId, function(response){
-			// console.log(response);
 			if(!response.status){
 				$scope.errors.push(response.errors);
 			}else{
@@ -48,11 +46,9 @@ myApp.controller('topicController',['$scope','topicFactory', '$routeParams', '$l
 			}
 		})
 	}
+	// Downvote a comment a user dislikes
 	$scope.voteDown= function(commentId, topicId){
-		// console.log(commentId);
-		// console.log(topicId);
 		commentFactory.voteDown(commentId, topicId, function(response){
-			// console.log(response);
 			if(!response.status){
 				$scope.errors.push(response.errors);
 			}else{
@@ -60,11 +56,5 @@ myApp.controller('topicController',['$scope','topicFactory', '$routeParams', '$l
 			}
 		})
 	}
-	
-
-
-
-
-
 
 }])

@@ -4,9 +4,6 @@ myApp.factory('commentFactory', function($http){
 	var factory = {}
 
 	factory.createComment = function(commentInfo, topicId, posterInfo, callback){
-		// console.log(commentInfo);
-		// console.log(topicId);
-		// console.log(posterInfo);
 		var info = {
 			comment: commentInfo.comment,
 			topicId: topicId,
@@ -16,7 +13,6 @@ myApp.factory('commentFactory', function($http){
 			posterUserName: posterInfo.userName
 		};
 		$http.post('/createComment',info).success(function(response){
-			// console.log(response);
 			if(!response.status){
 				callback(response);
 			}else{
@@ -30,7 +26,6 @@ myApp.factory('commentFactory', function($http){
 			topicId:topicId
 		};
 		$http.post('/voteUp',idList).success(function(response){
-			// console.log(response);
 			if(!response.status){
 				callback(response);
 			}else{
@@ -44,7 +39,6 @@ myApp.factory('commentFactory', function($http){
 			topicId:topicId
 		};
 		$http.post('/voteDown',idList).success(function(response){
-			// console.log(response);
 			if(!response.status){
 				callback(response);
 			}else{

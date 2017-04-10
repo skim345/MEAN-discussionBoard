@@ -4,8 +4,6 @@ myApp.factory('topicFactory', function($http){
 	var factory = {}
 
 	factory.createTopic = function(topicInfo, posterInfo, callback){
-		// console.log(topicInfo);
-		// console.log(posterInfo);
 		var topicAndPosterInfo={
 			topic: topicInfo.topic,
 			description: topicInfo.description,
@@ -33,7 +31,6 @@ myApp.factory('topicFactory', function($http){
 		})
 	}
 	factory.getSingleTopic= function(id, callback){
-		// console.log(id);
 		$http.get('/getSingleTopic/'+id).success(function(response){
 			if(!response.status){
 				callback(response);

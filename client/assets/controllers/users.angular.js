@@ -2,8 +2,8 @@ myApp.controller('userController',['$scope', '$routeParams', '$location','userFa
 
 	$scope.errors=[];
 
+	// Register a new user
 	$scope.register= function(){
-		// console.log($scope.newUser);
 		userFactory.register($scope.newUser, function(response){
 			if(!response.status){
 				console.log(response.errors);
@@ -14,6 +14,7 @@ myApp.controller('userController',['$scope', '$routeParams', '$location','userFa
 			}
 		})
 	}
+	// get user information on page load
 	userFactory.getUser(function(user_info){
 		$scope.user = user_info;
 		if(!$scope.user.loggedIn){
@@ -29,10 +30,9 @@ myApp.controller('userController',['$scope', '$routeParams', '$location','userFa
 			}
 		})
 	}
+	// login user
 	$scope.login= function(){
-		// console.log($scope.regUser);
 		userFactory.login($scope.regUser, function(response){
-			// console.log(response);
 			if(!response.status){
 				$scope.errors.push(response.errors);
 				$scope.regUser = "";

@@ -1,5 +1,7 @@
 myApp.controller('dashboardController',['$scope', '$routeParams', '$location','userFactory','topicFactory', function($scope, $routeParams, $location, userFactory,topicFactory){
 	$scope.errors=[];
+
+	// get user login information
 	userFactory.getUser(function(user_info){
 		$scope.user = user_info;
 		if(!$scope.user.loggedIn){
@@ -8,6 +10,7 @@ myApp.controller('dashboardController',['$scope', '$routeParams', '$location','u
 			$location.url('/dashboard');
 		}
 	})
+	// get posted topics
 	topicFactory.getTopics(function(response){
 		if(!response.status){
 			$scope.errors.push(response.errors);
@@ -15,6 +18,7 @@ myApp.controller('dashboardController',['$scope', '$routeParams', '$location','u
 			$scope.allTopics = response.topics;
 		}
 	})
+	// logoff user
 	$scope.logoff= function(){
 		userFactory.logoff(function(response){
 			if(!response.status){
@@ -26,8 +30,8 @@ myApp.controller('dashboardController',['$scope', '$routeParams', '$location','u
 			}
 		})
 	}
+	// create topic from user
 	$scope.createTopic= function(){
-		// console.log($scope.newTopic);
 		userFactory.getUser(function(user_info){
 			$scope.poster= user_info;
 		})
@@ -35,7 +39,6 @@ myApp.controller('dashboardController',['$scope', '$routeParams', '$location','u
 			if(!response.status){
 				$scope.errors.push(response.errors);
 			}else{
-				// console.log(response);
 				$scope.allTopics = response.topics;
 			}
 		})

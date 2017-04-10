@@ -2,7 +2,7 @@ myApp.controller('showUserController',['$scope','$routeParams', '$location','use
 
 	$scope.errors=[];
 
-	// console.log($routeParams.id);
+	// Get specific user information
 	userFactory.showUser($routeParams.id, function(response){
 		if(!response.status){
 			$scope.errors.push(response.errors);
@@ -10,6 +10,7 @@ myApp.controller('showUserController',['$scope','$routeParams', '$location','use
 			$scope.singleUser = response.user;
 		}
 	})
+	// logoff user
 	$scope.logoff= function(){
 		userFactory.logoff(function(response){
 			if(!response.status){

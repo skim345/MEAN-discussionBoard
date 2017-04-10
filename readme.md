@@ -1,5 +1,5 @@
 # Discussion Board
-### A discussion board you would find similar in a Q&A site. A user can post questions regarding a topic and have other users respond or comment.
+##### A discussion board you would find similar in a Q&A site. A user can post questions regarding a topic and have other users respond or comment.
 
 ## Features
 * Login and Registration
@@ -11,13 +11,16 @@
 * Display of individual users with total number of topics and comments posted
 * Display of individual topics with responses from all users
 * Up vote/ Down vote button so users may "like" or "dislike" their favorite responses
+* Restful routes
 
-##Technologies Utilized
+## Technologies Utilized
 * MongoDB
 * Express.js
 * Angular.js
 * Node.js
 * AWS
+* NPM
+* Nginx
 
 ![discussionBoard](discussionBoard.PNG)
 ![discussionBoard](discussionBoard2.PNG)
